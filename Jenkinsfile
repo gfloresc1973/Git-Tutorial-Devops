@@ -1,16 +1,17 @@
 node {
 	def app
 
-	stage(‘clone repository’){
+	stage("clone repository"){
 		/*let’s make sure we have the repository cloned to our workspace */
 		checkout scm
 	}
-	stage(‘Build image’){
+	stage("Build image"){
 		/*This builds the actual image; synonymous to docker build on the command line
 		
 		app = docker.build(“gfloresc/edureka”) 
 	}
-	stage(‘Test image’){
+	
+	stage("Test image"){
 		
 		app.inside{
 			sh ‘echo “Tests passed”’
